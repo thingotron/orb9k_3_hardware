@@ -1,4 +1,4 @@
-update=1/23/2016 10:58:59 AM
+update=2/8/2016 7:30:01 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,4 @@ LibName31=thing_custom
 LibName32=orbotron9k_2-cache
 LibName33=USB-C
 LibName34=Cortex Debug
+LibName35=54819-0519

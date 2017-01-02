@@ -12,3 +12,43 @@ USB-C Multicomp http://www.farnell.com/datasheets/1965372.pdf and amphenol https
 seem to have the same footprint... close (not quite).  For now try multicomp MC001003
 
 Holes at 0.15, 0.15, 1.1,0.15...0.5, 1.15... 1.1,1.15e
+
+- [ ] Check LEDs; they seem small
+
+# Comparison with FemtoUSB
+
+- We have connection between PA00/PA01 as x32in; should be our 32k oscillator.  They do as well, but they also use 4pF caps (not sure on their xtal) and have another xtal between PA14 and PA15, XIN/XOUT.  I have PA14 and PA15 disconnected.
+
+- Their I2C pins (PA08, PA09, PA17) all go through 330Rs; mine disconnected
+
+- My PA10/11 are TX/RX, just as pins out on theirs
+
+- USB seems connected similarly although PA28 connected to "id" pin via 330R and 100K to 3.3V, very odd.
+- Pinout on p28
+- Schematic checklist
+ - Power Supply
+   Close:
+   - [ ] 0.1uf VDDANA (9) to GNDANA (10?) 
+   - [ ] 0.1uf VDDIO (?) to GND 
+   - [ ] 0.1uf VDDIN (30) GND
+   - [ ] 1uf VDDCORE-GND
+   Further: 
+   - [ ] 10uf VDDANA/GNDANA
+   - [ ] 10uf VDDIN GND
+   Pwr (3.3v) to
+   - [ ] VDDANA through inductor (?)
+   - [ ] VDDIO
+   - [ ] VDDIN
+
+- Ext analog ref connections ignore
+- Ext reset circuit ignore
+- Clocks and oscillators
+  - External Clock source xtal, rec load cap 15pf, I'm using 22pf
+  - But "low frequency crystal oscillator optimized for use with 32khz watch crystal" between XIN32/XOut32.  This is the "external real time oscillator".
+
+- [ ] Pull up resistor on SWCLK pin?  I do not do this currently (they say 1k) but it seems to not need it.
+
+- USB interface
+ - "recommend to increase ESD protection using dedicated transient suppressors"
+ - recommended to connect shield and ground through RC filter to avoid USB cable becoming antenna
+
