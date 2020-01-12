@@ -23,7 +23,7 @@ Holes at 0.15, 0.15, 1.1,0.15...0.5, 1.15... 1.1,1.15e
 
 - My PA10/11 are TX/RX, just as pins out on theirs
 
-- USB seems connected similarly although PA28 connected to "id" pin via 330R and 100K to 3.3V, very odd.
+e- USB seems connected similarly although PA28 connected to "id" pin via 330R and 100K to 3.3V, very odd.
 - Pinout on p28
 - Schematic checklist
  - Power Supply
