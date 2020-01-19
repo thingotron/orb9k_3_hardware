@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# B3U-1000P
+#
+DEF B3U-1000P SW 0 40 Y N 1 L N
+F0 "SW" -200 200 50 H V L BNN
+F1 "B3U-1000P" -200 -300 50 H V L BNN
+F2 "SW_B3U-1000P" 0 0 50 H I L BNN
+F3 "Manufacturer Recommendations" 0 0 50 H I L BNN
+F4 "N/A" 0 0 50 H I L BNN
+F5 "OMRON" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -200 -200 -200 0 N
+P 2 0 0 10 -200 0 -200 200 N
+P 2 0 0 10 -200 200 200 200 N
+P 2 0 0 10 200 200 200 0 N
+P 2 0 0 10 200 0 200 -200 N
+P 2 0 0 10 200 -200 -200 -200 N
+P 2 0 0 6 -200 0 -50 0 N
+P 2 0 0 6 200 0 50 0 N
+P 2 0 0 6 -50 0 40 30 N
+X 1 1 -400 0 200 R 40 40 0 0 P 
+X 2 2 400 0 200 L 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library
